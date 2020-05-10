@@ -18,8 +18,7 @@ export default function Input({ label, name, action, type }) {
     }
   });
 
-  const set = e => {
-    let val = e.target.value;
+  const set = (val) => {
     setLocalVal(val);
     action(name, val);
   };
@@ -27,7 +26,12 @@ export default function Input({ label, name, action, type }) {
   return (
     <div className="field">
       <label>{label}</label>
-      <input onChange={e => set(e)} name={name} value={localVal} type={type} />
+      <input
+        onChange={(e) => set(e.target.value)}
+        name={name}
+        value={localVal}
+        type={type}
+      />
     </div>
   );
 }
