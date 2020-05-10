@@ -1,0 +1,102 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+.field {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.field label {
+  display: block;
+  text-align: left;
+}
+
+.field input {
+  width: 100%;
+  height: 25px;
+}
+
+button {
+  height: 25px;
+}
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.productItem div {
+  margin: 5px 0;
+}
+
+.productItem input {
+  width: 100%;
+  height: 25px;
+}
+
+.productItem span[aria-label="add"],
+.productItem span[aria-label="remove"] {
+  cursor: pointer;
+}
+
+.productItem .productItemText {
+  display: flex;
+  flex-direction: column;
+}
+
+.productItem .productItemText textarea {
+  resize: none;
+  height: 35px;
+}
+
+.productItem .productItemNumbers {
+  display: flex;
+  flex-direction: row;
+}
+
+.productItem .productItemNumbers div {
+  display: flex;
+  flex-direction: column;
+}
+
+.productItem .productItemNumbers div:nth-child(1) {
+  width: 40%;
+  padding-right: 2.5px;
+}
+
+.productItem .productItemNumbers div:nth-child(2) {
+  width: 60%;
+  padding-left: 2.5px;
+}
+
+.productItem .productItemNumbers input {
+  width: 100%;
+}
+
+.productItem .productItemBottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.productItem span[aria-label="add"],
+.productItem span[aria-label="remove"] {
+  cursor: pointer;
+}
+
+.productItem .productItemBottom textarea {
+  resize: none;
+  height: 40px;
+}
