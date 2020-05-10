@@ -82,6 +82,7 @@ export default function ProductsDrawer({ action, itemsListSize }) {
 
   return (
     <div className="productDrawer">
+      <h5>Products List</h5>
       {renderProducts()}
       <span
         role="img"

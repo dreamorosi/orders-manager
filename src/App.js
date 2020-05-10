@@ -20,7 +20,8 @@ export default function App() {
     localStorage.removeItem("itemList");
     // Temporary artificial delay
     window.setTimeout(() => {
-      // window.location.reload();
+      window.alert("Success!");
+      window.location.reload();
     }, 2000);
   };
 
@@ -28,32 +29,35 @@ export default function App() {
     <div className="App">
       <header>
         <img src={logo} alt="Trendline Logo" />
+        <h1>Register Order</h1>
       </header>
-      <Input
-        label="Customer Name"
-        name="fullName"
-        value={form}
-        action={setValue}
-        type="text"
-      />
-      <Input
-        label="Email (optional)"
-        name="email"
-        value={form}
-        action={setValue}
-        type="email"
-      />
-      <Input
-        label="Phone"
-        name="phone"
-        value={form}
-        action={setValue}
-        type="tel"
-      />
-      <ProductsDrawer
-        action={setValue}
-        itemsListSize={"items" in form ? Object.keys(form.items) : 0}
-      />
+      <section>
+        <Input
+          label="Customer Name"
+          name="fullName"
+          value={form}
+          action={setValue}
+          type="text"
+        />
+        <Input
+          label="Email (optional)"
+          name="email"
+          value={form}
+          action={setValue}
+          type="email"
+        />
+        <Input
+          label="Phone"
+          name="phone"
+          value={form}
+          action={setValue}
+          type="tel"
+        />
+        <ProductsDrawer
+          action={setValue}
+          itemsListSize={"items" in form ? Object.keys(form.items) : 0}
+        />
+      </section>
       <button type="button" onClick={collectValues}>
         Submit
       </button>
